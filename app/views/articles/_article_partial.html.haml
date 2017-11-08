@@ -1,0 +1,18 @@
+.row
+  .mainContainer
+    .datetag
+      .bannerImageContainer.col-sm-12
+        %span
+          = article.created_at.strftime("#{article.created_at.day.ordinalize}") 
+          = article.created_at.strftime("%b").upcase
+        %a.bannerImage{:href => "articles/#{article.url_title}"}
+        =image_tag article.banner_image.url(:medium)
+    %h3.title.col-sm-12
+      =article.title
+    .mainContent.col-sm-12
+      =raw article.short_description
+    .interactions.col-sm-12
+      = link_to :"READ MORE", "articles/#{article.url_title}",class: "btn readMoreBtn"
+      %span.btn.readMoreBtn.pull-right.shareBtn{title: article.title, url:  "articles/#{article.url_title}", android: params[:android].to_i}
+        SHARE
+        = image_tag("share_icon.png")

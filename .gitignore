@@ -1,0 +1,19 @@
+# Ignore bundler config, files
+/.bundle
+vendor/
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+/spec/support/uploads/tmp
+
+# Ignore uploaded files
+/public/uploads
+
+#Ignore IDE, OS specific config files
+.DS_Store
+.idea/

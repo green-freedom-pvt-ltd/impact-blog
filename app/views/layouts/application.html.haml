@@ -1,0 +1,40 @@
+!!!
+%html{:lang => "en"}
+  %head
+    = render "/layouts/ga_analytics"
+    %meta{:content => @meta_description,:name=>"description"}
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{:content => "1548728332017744", :name => "fb:app_id"}/
+    //facebook
+    %meta{:content => @title || nil, :property => "og:title"}/
+    - if @images.present?
+      - @images.each do |image|
+        %meta{:content => image, :property => "og:image"}/
+    - if @article.present? and @article.id.present?
+      %meta{:content => "article", :property => "og:type"}/
+      %meta{:content => "#{Rails.configuration.domain_url}#{article_path(@article.url_title)}", :property => "og:url"}/
+      %meta{:content => ActionView::Base.full_sanitizer.sanitize(@article.short_description), :property => "og:description"}/
+      //twitter
+      %meta{:content => ActionView::Base.full_sanitizer.sanitize(@article.short_description), :name => "twitter:card"}/
+      %meta{:content => @article.title, :name => "twitter:title"}/
+      %meta{:content => ActionView::Base.full_sanitizer.sanitize(@article.content), :name => "twitter:description"}/
+      %meta{:content => @article.banner_image, :name => "twitter:image"}/
+    %title
+      = @title
+    
+    = favicon_link_tag "FAVICON2.png"
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application", 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    #errorModal
+      %i.fa.exclamation-triangle
+    = render "/layouts/share"
+    - if current_user.present?
+      =render "/layouts/auth_bar" 
+    = render "/layouts/header"
+    .mainContainer
+      = yield
+    = render "/layouts/footer"

@@ -1,0 +1,27 @@
+.row
+  .col-sm-10.col-sm-offset-1
+    = form_for @user, url: admin_user_create_path do |f|
+      - if @user.errors.any?
+        #error_explanation
+          %h2
+            = pluralize(@user.errors.count, "error")
+            prohibited this user from being saved:
+          %ul
+            - @user.errors.full_messages.each do |message|
+              %li= message
+
+      .field.col-sm-12
+        = f.label :Name
+        %br/
+        = f.text_field :name, class: "col-sm-12"
+      .field.col-sm-12
+        = f.label :email
+        %br/
+        = f.text_field :email, class: "col-sm-12"
+      .field.col-sm-12
+        = f.label :password
+        %br/
+        = f.password_field :password, class: "col-sm-12"
+      .actions.col-sm-12
+        = f.submit class: "btn btn-success"
+        = link_to :cancel, articles_path, class: "btn btn-primary textWhite" 

@@ -1,0 +1,22 @@
+%p
+  #notice= notice
+  .row
+    .mainContainer
+      .datetag
+        .bannerImageContainer.col-sm-12
+          %span
+            = @article.created_at.strftime("#{@article.created_at.day.ordinalize}") 
+            = @article.created_at.strftime("%b").upcase
+        - if @article.banner_image
+          %a.bannerImage{:href => article_path(@article.url_title)}
+            =image_tag @article.banner_image.url(:medium)
+      %h3.title.col-sm-12{"og:title" => @article.title}
+        =@article.title
+      .mainContent.col-sm-12
+        =raw @article.content
+      .interactions.col-sm-12
+        = link_to :"BACK", articles_path,class: "btn readMoreBtn"
+        - unless mobile_hide
+          %span.btn.readMoreBtn.pull-right.shareBtn{title: @article.title, url:  article_path(@article.url_title), android: params[:android].to_i}
+            SHARE
+            = image_tag("share_icon.png")

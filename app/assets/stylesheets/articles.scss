@@ -1,0 +1,195 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html, body, .row {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+@font-face
+{
+  font-family: Lato;
+  font-weight: bold;
+}
+@font-face
+{
+  font-family: Lato;
+}
+@font-face
+{
+  font-family: Lato;
+  font-weight: 100;
+}
+@font-face
+{
+  font-family: Lato;
+  font-weight: 200;
+}
+
+body,h1,h2,h3,h4,h5,h6
+{
+  font-family: Lato !important;
+}
+.mainContainer {
+    max-width: 700px;
+    margin: 0 auto !important;
+    padding: 20px 0px; 
+}
+.wysihtml5-sandbox
+{
+  height: 300px !important;
+}
+.readMoreBtn
+{
+  background: none !important;
+  border: 1px solid #53c3c7 !important;
+}
+.readMoreBtn
+{
+  color: #333 !important; 
+}
+.readMoreBtn:visited
+{
+  color: #333 !important;
+}
+
+.bannerImage
+{
+  margin: auto !important;
+  display: block;
+  border-radius: 3px;
+}
+
+.mainContent
+{
+  padding-top: 0px;
+  padding-bottom: 20px;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+.mainContent p
+{
+  font-size: 14px;
+}
+.mainContent img
+{
+  width: 100% !important;
+}
+
+.bannerImageContainer
+{
+  width: 100%;
+  padding:0px !important;
+}
+
+.headText 
+{
+  width: 100;
+  font-size: 55px;
+  padding-left: 0px !important;
+  padding-right: 0px !important; 
+  text-decoration: none;
+  color: #353535;
+}
+.headText a:hover
+{
+  color: #212121 !important;
+  text-decoration: none;
+
+}
+.headText a:visited
+{
+  color: #353535;
+}
+
+.headText a
+{
+  text-decoration: none;
+  color: #353535;
+}
+
+.headerLine
+{
+  max-width: 700px;
+  margin: -20px auto 0 auto !important;
+  color: #353535;
+}
+
+.headerLine hr
+{
+  border: 1px solid #353535;
+  width: 50%;
+}
+@media(max-width:768px){
+ .headText
+ {
+  padding-top: 10px;
+  font-size: 35px;
+ }
+}
+@media(max-width:480px){
+ .headText
+ {
+  padding-top: 10px;
+  font-size: 30px;
+ }
+}
+.datetag
+{
+  text-align: center !important; 
+  padding: 10px !important;
+  margin-bottom: -20px !important;
+}
+
+.datetag span
+{
+  background: #ffffff;
+  padding: 5px 10px;
+  border: 1px solid #e75561;
+  border-radius: 4px;
+  position: relative;
+}
+
+.share_list
+{
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  list-style-type: none;
+}
+.modal-body
+{
+  padding: 0px !important;
+  
+}
+.share_list li
+{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.share_list li a
+{
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+.share_list li a:hover
+{
+  text-decoration: none;
+  color: #333;
+}
+.share_list li a:visited
+{
+  text-decoration: none;
+  color: #333;
+}
+.share_list:last-child
+{
+  border: none;
+}
+.share_list li img
+{
+  padding-right: 5px;
+  padding-left: 5px;
+}

@@ -1,0 +1,17 @@
+// Place all the styles related to the leads controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#errorModal {
+  background: #002d5c;
+  height: 30px;
+  top: 80px;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  z-index: 3000;
+  color: #fff;
+  padding-top: 3px;
+  display: none;
+  .fa
+  {padding: 0px 10px;}
+}

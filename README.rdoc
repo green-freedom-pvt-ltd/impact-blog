@@ -1,0 +1,38 @@
+== README
+technologies used:
+Bootstrap: front end CSS framework
+Jquery
+Coffeescript
+pg
+Gem used:
+devise: for authentication
+haml-rails: Using Haml instead of HTML directly for maintaining cleaner code. Haml-rails translate haml to html
+Bootsy: Bootstrap based HTML text box
+
+Database structure:
+tables:
+1. user: 
+email: email of user
+encrypted_password: encrypted password/ default devise strategy for encryption
+name: Full name of User
+reset_password_token: token to reset password
+reset_password_sent_at: time when token to reset password was sent
+sign_in_count: No. of times user has signed in
+current_sign_in_at: user sign in time
+last_sign_in_at: when did user sign in last time
+current_sign_in_ip: user sign in ip
+last_sign_in_ip: last time user sign in ip
+
+2. article
+content: main content of the article / stored in form of html 
+short_description: introduction displayed on landing page
+meta_description: for seo purpose. Right now not getting used
+title: main title of article
+banner_image: direct image url is stored in this field. 
+user_id: association to user table
+type: right now not in user. Made for if you want tot define category. Need to change the name
+created_at
+updated_at
+url_title: find article for show page via this field
+status: incase we need to keep some article inactive
+banner_image_show: flag to decide, if we want to show banner image 

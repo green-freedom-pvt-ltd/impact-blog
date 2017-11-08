@@ -1,0 +1,29 @@
+%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button", :role => "document",}
+  #shareModal.modal.fade.bs-example-modal-sm
+    .modal-dialog.modal-sm
+      .modal-content
+        .modal-header
+         
+          %h4.modal-title Share
+          .modal-body{domain: "unplugged.bewakoof.com"}
+          %ul.share_list
+            %li.facebookhttp{url: "http://www.addtoany.com/add_to/facebook?linkurl="}
+              %a{href: "",target: "_blank", rel: "nofollow"}
+                = image_tag("f_clr.png")
+                Facebook
+            %li.twitter{url: "http://www.addtoany.com/add_to/twitter?linkurl="}
+              %a{href: "",target: "_blank", rel: "nofollow"}
+                = image_tag("tw_clr.png")
+                Twitter
+            %li.google_plus{url: "http://www.addtoany.com/add_to/google_plus?linkurl="}
+              %a{href: "",target: "_blank", rel: "nofollow"}
+                = image_tag("g_clr.png")
+                Google Plus
+            %li.pinterest{url: "http://www.addtoany.com/add_to/pinterest?linkurl="}
+              %a{href: "",target: "_blank", rel: "nofollow"}
+                = image_tag("p_clr.png")
+                Pinterest
+            %li.email{url: "http://www.addtoany.com/add_to/email?linkurl="}
+              %a{href: "",target: "_blank", rel: "nofollow"}
+                = image_tag("m_clr.png")
+                Email}
