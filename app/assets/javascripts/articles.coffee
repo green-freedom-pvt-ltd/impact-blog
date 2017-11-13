@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).on 'turbolinks:load', ->
-
+  $('.text_box').froalaEditor();
   $('.shareBtn').click ->
     $('#modal').css('borderWidth',"0") if /AppName\/[0-9\.]+$/.test(navigator.userAgent)
     title = $(this).attr("title")

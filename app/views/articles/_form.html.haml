@@ -21,11 +21,11 @@
       .field.col-sm-12
         = f.label :content
         %br/
-        = f.bootsy_area :content, class: "col-sm-12", height: 200
+        = f.text_area :content, class: "col-sm-12 text_box", height: 200
         .field.col-sm-12
         = f.label :short_description
         %br/
-        = f.bootsy_area :short_description, class: "col-sm-12"
+        = f.text_area :short_description, class: "col-sm-12 text_box"
       .field.col-sm-12
         = f.label :meta_description
         %br/
