@@ -6,7 +6,7 @@
           = article.created_at.strftime("#{article.created_at.day.ordinalize}") 
           = article.created_at.strftime("%b").upcase
         %a.bannerImage{:href => "articles/#{article.url_title}"}
-        =image_tag article.banner_image.url(:medium)
+          =image_tag article.banner_image.url(:medium)
     %h3.title.col-sm-12
       =article.title
     .mainContent.col-sm-12
