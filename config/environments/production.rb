@@ -49,19 +49,29 @@ Rails.application.configure do
   config.log_level = :debug
   Paperclip.options[:log] = true
   # Compress JavaScripts and CSS.
-  config.domain_url = "http://theory.redesyn.com"
+  config.domain_url = "http://blog.impactapp.in"
   config.assets.js_compressor = Uglifier.new(:copyright => false)
   config.assets.css_compressor = :sass
   config.paperclip_defaults = {
     :storage => :s3,
     :url => ':s3_alias_url',
     s3_protocol: 'https',
-    :s3_host_alias => 'd2ulep4r6r6f8z.cloudfront.net', 
+    :s3_host_alias => 's3.ap-south-1.amazonaws.com/impact-feed', 
     :s3_credentials => {
-      :bucket => ENV['S3_BUCKET_NAME'],
-      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-    }
+      :bucket => 'impact-feed',
+      :access_key_id => 'AKIAIFMPU2TS2ZTUJPNA',
+      :secret_access_key => '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'
+      # :bucket => ENV['S3_BUCKET_NAME'],
+      # :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      # :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    },
+    :s3_region => 'ap-south-1'
+    # :s3_host_alias => 'd2ulep4r6r6f8z.cloudfront.net', 
+    # :s3_credentials => {
+    #   :bucket => ENV['S3_BUCKET_NAME'],
+    #   :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    #   :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    # }
   }
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
