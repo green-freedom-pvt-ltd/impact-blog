@@ -52,5 +52,6 @@ production:
   encoding : unicode
   pool: 5
   username: postgres
+  password: sharingsmiles
   timeout: 5000
   database: impact_blog_production
