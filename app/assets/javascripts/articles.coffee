@@ -14,7 +14,7 @@ $(document).on 'turbolinks:load', ->
     return
 
   $(window).resize ->
-    resize_box()
+#   resize_box()
     return
 
   resize_box = () ->
