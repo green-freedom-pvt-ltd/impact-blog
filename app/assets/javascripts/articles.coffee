@@ -13,20 +13,3 @@ $(document).on 'turbolinks:load', ->
     $('#shareModal').modal('show')
     return
 
-#  $(window).resize ->
-#    resize_box()
-#    return
-
-#  resize_box = () ->
-#    width = if $(".bannerImageContainer").width() < 700 then $(".bannerImageContainer").width() - 20 else 700
-#    height = (width*9)/14
-#    $('.bannerImage').css("height",height)
-#    $('.bannerImage').css("width",width)
-#    return
-#  for_android_web_view = () ->
-#    if navigator.userAgent.includes('Dalvik')
-#      $('#full_footer').hide();
-#      $('#m_full_footer').hide();
-#  resize_box()
-#  for_android_web_view()
-#  return
