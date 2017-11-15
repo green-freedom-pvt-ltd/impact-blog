@@ -18,6 +18,7 @@ $(document).on 'turbolinks:load', ->
     return
 
 
+
   resize_box = () ->
     width = if $(".bannerImageContainer").width() < 700 then $(".bannerImageContainer").width() - 20 else 700
     height = (width*9)/14
