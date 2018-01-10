@@ -31,7 +31,7 @@ Rails.application.configure do
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
 
-  config.assets.js_compressor = Uglifier.new(:copyright => false)
+  # config.assets.js_compressor = Uglifier.new(:copyright => false)
   config.assets.css_compressor = :sass
   config.paperclip_defaults = {
     :storage => :s3,

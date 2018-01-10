@@ -17,3 +17,5 @@ vendor/
 #Ignore IDE, OS specific config files
 .DS_Store
 .idea/
+
+shared/*
