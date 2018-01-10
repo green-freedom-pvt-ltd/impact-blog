@@ -50,7 +50,7 @@ Rails.application.configure do
   Paperclip.options[:log] = true
   # Compress JavaScripts and CSS.
   config.domain_url = "http://blog.impactapp.in"
-  config.assets.js_compressor = Uglifier.new(:copyright => false)
+  #config.assets.js_compressor = Uglifier.new(:copyright => false)
   config.assets.css_compressor = :sass
   config.paperclip_defaults = {
     :storage => :s3,
