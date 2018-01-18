@@ -5,9 +5,9 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @meta_description = "Bewakoof.com brings you trendy T-Shirts, boxers, pyjamas for men/women, mobile cases and more online. Visit today and unveil the funkiness in you."
-    @title = "Redesyn Theory"
-    @images = ["https://s3-ap-southeast-1.amazonaws.com/bewakoof-blog/BeBewakoof.jpg","https://s3-ap-southeast-1.amazonaws.com/bewakoof-blog/color_of_logo.jpg"]
+    @meta_description = "Impact - Get Fit. Do Good."
+    @title = "Impact"
+    # @images = ["https://s3-ap-southeast-1.amazonaws.com/bewakoof-blog/BeBewakoof.jpg","https://s3-ap-southeast-1.amazonaws.com/bewakoof-blog/color_of_logo.jpg"]
     @articles = Article.order('articles.created_at DESC')
     @articles = @articles.active unless current_user.present? 
   end
@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1.json
   def show
     redirect_to articles_path if @article.status == "inactive" and current_user.blank?
-    @title = @article.title.capitalize
+    @title = @article.title
     @images = [@article.banner_image]
     @article.short_description
     @meta_description = @article.meta_description
