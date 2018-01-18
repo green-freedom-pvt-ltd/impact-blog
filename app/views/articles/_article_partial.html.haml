@@ -1,18 +1,20 @@
 .row
   .mainContainer
-    .datetag
+    .datetag-new
       .bannerImageContainer.col-sm-12
-        %span
-          = article.created_at.strftime("#{article.created_at.day.ordinalize}") 
-          = article.created_at.strftime("%b").upcase
-        %a.bannerImage{:href => "articles/#{article.url_title}"}
-          =image_tag article.banner_image.url(:medium)
-    %h3.title.col-sm-12
-      =article.title
-    .mainContent.col-sm-12
-      =raw article.short_description
-    .interactions.col-sm-12
-      = link_to :"READ MORE", "articles/#{article.url_title}",class: "btn readMoreBtn"
-      %span.btn.readMoreBtn.pull-right.shareBtn{title: article.title, url:  "articles/#{article.url_title}", android: params[:android].to_i}
-        SHARE
-        = image_tag("share_icon.png")
+        .card
+          %a.bannerImage{:href => "articles/#{article.url_title}"}
+            =image_tag article.banner_image.url(:medium)
+          .card-body{ :style => 'padding: 10px 15px;margin-bottom: 10px;' }      
+            %h4.card-title{ :style => "color:rgba(0, 0, 0, 0.64);font-size:18px;font-family:Lato;font-weight: 900;" } 
+              =article.title
+            %p
+              .card-text.text-ellipses-3{ :style => "font-family:Lato;font-weight:400;color:#4a4a4a ;font-size:13px" }
+                =raw article.short_description
+            .interactions{:style => "display: flex;align-items: center;justify-content: space-between;"}
+              %a{:style => "font-family:Lato;font-weight:400;color:#777777;text-decoration: none;" }  
+                %span
+                  = article.created_at.strftime("#{article.created_at.day.ordinalize}")
+                  = article.created_at.strftime("%b").upcase
+              %a.btn.btn-primary.pull-right.shareBtn
+                %i.fa.fa-share-alt{ :aria-hidden => "true"} &nbsp;&nbsp;SHARE
