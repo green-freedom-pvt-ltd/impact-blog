@@ -4,9 +4,6 @@
     .mainContainer
       .datetag
         .bannerImageContainer.col-sm-12
-          %span
-            = @article.created_at.strftime("#{@article.created_at.day.ordinalize}") 
-            = @article.created_at.strftime("%b").upcase
         - if @article.banner_image
           %a.bannerImage{:href => article_path(@article.url_title)}
             =image_tag @article.banner_image.url(:medium)
@@ -17,6 +14,6 @@
       .interactions.col-sm-12
         = link_to :"BACK", articles_path,class: "btn readMoreBtn"
         - unless mobile_hide
-          %span.btn.readMoreBtn.pull-right.shareBtn{title: @article.title, url:  article_path(@article.url_title), android: params[:android].to_i}
-            SHARE
-            = image_tag("share_icon.png")
+          %span.btn.btn-primary.pull-right.shareBtn{title: @article.title, url:  article_path(@article.url_title), android: params[:android].to_i}
+            %i.fa.fa-share-alt{ :aria-hidden => "true"} 
+            %span{:style => "font-family:Lato"} &nbsp;&nbsp;SHARE

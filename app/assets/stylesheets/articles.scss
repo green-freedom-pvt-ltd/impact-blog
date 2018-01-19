@@ -38,7 +38,6 @@ body,h1,h2,h3,h4,h5,h6
 .card {
   border: 2px solid rgba(0,0,0,.125);
   border-radius: .25rem;
-  margin: 20px 0px;
 }
 .wysihtml5-sandbox
 {
@@ -167,6 +166,10 @@ body,h1,h2,h3,h4,h5,h6
 a.btn.btn-primary.pull-right.shareBtn:hover {
     color: white;
     background: #2e6da4 !important;
+}
+.btn-primary{
+  background-color: #00c1f2 !important;
+  border-color: transparent !important;
 }
 .datetag span
 {

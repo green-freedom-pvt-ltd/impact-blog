@@ -5,7 +5,7 @@
         .card
           %a.bannerImage{:href => "articles/#{article.url_title}"}
             =image_tag article.banner_image.url(:medium)
-          .card-body{ :style => 'padding: 10px 15px;margin-bottom: 10px;' }      
+          .card-body{ :style => 'padding: 10px 15px;' }      
             %h4.card-title{ :style => "color:rgba(0, 0, 0, 0.64);font-size:18px;font-family:Lato;font-weight: 900;" } 
               =article.title
             %p
