@@ -14,7 +14,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/latest
   def latest
-    render json: {creation_time: Article.active.last.created_at}
+    render json: {creation_time: Article.active.last.created_at.to_i}
   end
 
   # GET /articles/1
