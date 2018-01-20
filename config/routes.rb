@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :leads
   root 'articles#index'
   # mount Bootsy::Engine => '/bootsy', as: 'bootsy'
+  get 'articles/latest' => 'articles#latest' , defaults: {format: :json}
   resources :articles
   devise_for :users
   namespace :admin do

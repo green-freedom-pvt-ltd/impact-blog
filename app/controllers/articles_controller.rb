@@ -12,6 +12,11 @@ class ArticlesController < ApplicationController
     @articles = @articles.active unless current_user.present? 
   end
 
+  # GET /articles/latest
+  def latest
+    render json: {creation_time: Article.active.last.created_at}
+  end
+
   # GET /articles/1
   # GET /articles/1.json
   def show
