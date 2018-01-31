@@ -17,6 +17,11 @@ class ArticlesController < ApplicationController
     render json: {creation_time: Article.active.last.created_at.to_i}
   end
 
+  def howitworks
+    @data = File.read("#{Rails.root}/public/how_it_works.json")
+    render :json => @data
+  end
+
   # GET /articles/1
   # GET /articles/1.json
   def show

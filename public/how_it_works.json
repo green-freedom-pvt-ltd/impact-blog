@@ -1,0 +1,24 @@
+{
+  "how_it_works_steps": [
+    {
+      "title": "1. NGOs come on-board",
+      "content": "We check all the documents and past work of a registered NGO. After studying their proposed project plan, we welcome the NGO to Impact family.",
+      "image_url": "https://s3.ap-south-1.amazonaws.com/impact-image-assets/howitworks/1.png"
+    },
+    {
+      "title": "2. Companies pledge their support",
+      "content": "Our kind corporate partners fund the NGO projects with their Corporate Social Responsibility (CSR) budget. A cause campaign goes live on the app as soon as the charity amount is pledged by the company. ",
+      "image_url": "https://s3.ap-south-1.amazonaws.com/impact-image-assets/howitworks/2.png"
+    },
+    {
+      "title": "3. Campaign goes live on the app",
+      "content": "Once a cause is live, our users walk and jog every day to achieve the charity goal.",
+      "image_url": "https://s3.ap-south-1.amazonaws.com/impact-image-assets/howitworks/3.png"
+    },
+    {
+      "title": "4. Funds get transferred  for on-ground Impact",
+      "content": "After the cause reaches 100%, the funding company sends the money to the NGO and the NGO shares a project report after the usage of funds. We share the report as soon as it is available with us.",
+      "image_url": "https://s3.ap-south-1.amazonaws.com/impact-image-assets/howitworks/4.png"
+    }
+  ]
+}
